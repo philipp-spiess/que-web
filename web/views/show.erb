@@ -32,7 +32,9 @@
         </tr>
         <tr>
           <th>Args</th>
-          <td><pre><%= @job.args.map(&:inspect).join(', ') %></pre></td>
+          <td>
+            <pre><%= @job.inspect_args %></pre>
+          </td>
         </tr>
         <tr>
           <th>Last Error</th>

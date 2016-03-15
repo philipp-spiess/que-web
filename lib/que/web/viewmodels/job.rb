@@ -14,5 +14,13 @@ module Que::Web::Viewmodels
     def past_due?(relative_to = Time.now)
       run_at < relative_to
     end
+
+    def inspect_args
+      if args.respond_to?(:map)
+        args.map(&:inspect).join(', ')
+      else
+        args
+      end
+    end
   end
 end

@@ -99,7 +99,7 @@ module Que
       end
 
       def format_args(job)
-        truncate job.args.map(&:inspect).join(', ')
+        truncate job.inspect_args
       end
 
       def format_error(job)
